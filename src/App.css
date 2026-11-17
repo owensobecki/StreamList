@@ -182,3 +182,310 @@
     border-right-color: var(--border);
   }
 }
+/* Shopping Store */
+.store-page {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.store-page > h2,
+.shopping-cart > h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding: 25px;
+  background: #b5dce9;
+  border: 2px solid #aaa;
+  border-radius: 6px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.product-icon {
+  display: block;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  min-height: 40px;
+}
+
+.product-card p {
+  font-weight: bold;
+}
+
+.product-card button,
+.quantity-controls button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #252525;
+  color: white;
+  cursor: pointer;
+}
+
+.product-card button:hover,
+.quantity-controls button:hover {
+  background: #555;
+}
+
+.shopping-cart {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 3px solid #aaa;
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.cart-item p {
+  margin-bottom: 0;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #252525;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.checkout-button[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.product-image {
+  width: 150px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.store-description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Credit Card Management */
+.payment-page {
+  max-width: 950px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+.payment-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.payment-heading h2 {
+  font-size: 28px;
+}
+
+.payment-heading p {
+  color: #b8c1d1;
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.payment-form-card,
+.saved-payment-section {
+  background: #20232d;
+  border: 1px solid #383d4b;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.payment-form-card h3,
+.saved-payment-section h3 {
+  margin-top: 0;
+}
+
+.payment-note,
+.empty-payment {
+  color: #aeb8c9;
+  font-size: 13px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.form-field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #51596a;
+  border-radius: 6px;
+  background: #15171e;
+  color: white;
+  font-size: 14px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.save-card-button {
+  padding: 13px;
+  background: #c4b5fd;
+  color: #171323;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-card-button:hover {
+  background: #a78bfa;
+}
+
+.payment-message {
+  color: #a7e5b5;
+  font-size: 14px;
+}
+
+.saved-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.saved-card {
+  background: linear-gradient(135deg, #343b54, #171a24);
+  border: 1px solid #515a76;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+.saved-card-top,
+.saved-card-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.saved-card-top {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #c4b5fd;
+}
+
+.saved-card-number {
+  font-size: 19px;
+  letter-spacing: 2px;
+  margin: 30px 0;
+}
+
+.saved-card-details small {
+  color: #aeb8c9;
+  font-size: 10px;
+}
+
+.saved-card-details p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.remove-card-button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #ff9b9b;
+  border: 1px solid #a45b68;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-card-button:hover {
+  background: #492b35;
+}
+
+@media (max-width: 700px) {
+  .payment-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+.eztechmovie-logo {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto 30px;
+  object-fit: contain;
+}
